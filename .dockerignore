@@ -1,0 +1,35 @@
+# Git
+.git
+.gitignore
+
+# Dependencies (reinstalled in image)
+**/node_modules/
+backend/.venv/
+
+# Build output (rebuilt in image)
+**/dist/
+
+# Backend runtime data (use volume in compose)
+backend/data/
+**/__pycache__/
+
+# Other app / docs (not needed for frontend image)
+e2e/
+firemerge/
+docs/
+SECURITY.md
+
+# IDE and OS
+.cursor
+.vscode
+.idea
+**/*.DS_Store
+**/*.swp
+**/*.swo
+
+# Logs and env
+*.log
+.env
+.env.*
+!.env.example
+.cursor

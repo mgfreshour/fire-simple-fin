@@ -1,0 +1,55 @@
+# Env and secrets (root .env and env.example at repo root)
+.env
+.env.*
+!.env.example
+*.env
+!env.example
+!*.env.example
+.env.enc
+*.enc
+.sops.yaml
+age-key.txt
+*.agekey
+SOPS_AGE_KEY
+
+# Data and DB
+backend/data/
+*.db
+*.sqlite
+*.sqlite3
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+dist/
+build/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Node / frontend
+node_modules/
+frontend/dist/
+.npm
+*.tsbuildinfo
+
+# Playwright / e2e
+e2e/node_modules/
+e2e/test-results/
+e2e/playwright-report/
+e2e/blob-report/
+e2e/.cache/
+
+# IDE and OS
+.idea/
+.vscode/
+.DS_Store
+*.log
+.cursor
+
+# Internal / private planning notes (not published)
+docs/

@@ -1,0 +1,17 @@
+services:
+  app:
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      - LISTEN_URL=0.0.0.0:8080
+      - DATABASE_PATH=/app/backend/data/firesimplefin.db
+      - FRONTEND_DIST=/app/frontend/dist
+    env_file:
+      - .env
+    volumes:
+      - app-data:/app/backend/data
+    restart: unless-stopped
+
+volumes:
+  app-data:
